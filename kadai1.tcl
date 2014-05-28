@@ -39,14 +39,14 @@ set n1 [$ns node]
 set r0 [$ns node]
 set r1 [$ns node]
 
-$ns duplex-link $s0 $n0 10Mb 10ms DropTail
-$ns duplex-link $s1 $n0 10Mb 10ms DropTail
+$ns duplex-link $s0 $n0 10Mb 20ms DropTail
+$ns duplex-link $s1 $n0 10Mb 20ms DropTail
 
-$ns duplex-link $n0 $n1 0.5Mb 30ms DropTail
+$ns duplex-link $n0 $n1 0.5Mb 60ms DropTail
 $ns duplex-link-op $n0 $n1 queuePos 0.5
 
-$ns duplex-link $n1 $r0 10Mb 10ms DropTail
-$ns duplex-link $n1 $r1 10Mb 10ms DropTail
+$ns duplex-link $n1 $r0 10Mb 20ms DropTail
+$ns duplex-link $n1 $r1 10Mb 20ms DropTail
 
 $ns duplex-link-op $n0 $s0 orient up-left
 $ns duplex-link-op $n0 $s1 orient down-left
