@@ -54,8 +54,8 @@ $ns duplex-link-op $n0 $n1 orient right
 $ns duplex-link-op $n1 $r0 orient up-right
 $ns duplex-link-op $n1 $r1 orient down-right
 
-$ns queue-limit $n0 $n1 50
-$ns queue-limit $n1 $n0 50
+$ns queue-limit $n0 $n1 5 
+$ns queue-limit $n1 $n0 5
 
 # FTP sender: Transport and Application
 Agent/TCP set window_ 200000
@@ -105,9 +105,9 @@ proc finish {} {
 }
 
 $ns at 1.0 "$ftp0 start; $ns trace-annotate \"Time:[$ns now] Start FTP\""
-#$ns at 51.0 "$cbr0 start;
-#$ns trace-annotate \"Time:[$ns now] Start CBR interval [$cbr0 set interval_] size [$cbr0 set packetSize_]\""
-#$ns at 101.0 "$cbr0 stop; $ns trace-annotate \"Time:[$ns now] Stop CBR\""
+$ns at 51.0 "$cbr0 start;
+$ns trace-annotate \"Time:[$ns now] Start CBR interval [$cbr0 set interval_] size [$cbr0 set packetSize_]\""
+$ns at 101.0 "$cbr0 stop; $ns trace-annotate \"Time:[$ns now] Stop CBR\""
 $ns at 200.0 "$ftp0 stop; $ns trace-annotate \"Time:[$ns now] Stop FTP\""
 $ns at 200.0 "finish"
 #
