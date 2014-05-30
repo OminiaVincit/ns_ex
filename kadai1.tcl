@@ -173,9 +173,9 @@ $ns trace-annotate \"Time:[$ns now] Start FTP\""
 
 #$ns at 101.0 "$cbr1 stop; $ns trace-annotate \"Time:[$ns now] Stop CBR\""
 #$ns at 101.0 "$cbr0 stop; $ns trace-annotate \"Time:[$ns now] Stop CBR\""
-$ns at 500.0 "$ftp0 stop; $ns trace-annotate \"Time:[$ns now] Stop FTP\""
-$ns at 500.0 "$ftp1 stop; $ns trace-annotate \"Time:[$ns now] Stop FTP\""
-$ns at 500.25 "finish"
+$ns at 200.0 "$ftp0 stop; $ns trace-annotate \"Time:[$ns now] Stop FTP\""
+$ns at 200.0 "$ftp1 stop; $ns trace-annotate \"Time:[$ns now] Stop FTP\""
+$ns at 200.25 "finish"
 #
 # start simulatuion
 #
